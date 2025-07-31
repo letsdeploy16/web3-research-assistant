@@ -1,0 +1,14 @@
+{
+  "name": "web3-research-assistant",
+  "version": "1.0.0",
+  "description": "An AI agent for researching Web3 projects using Groq and JuliaOS.",
+  "main": "agent.js",
+  "scripts": {
+    "start": "node agent.js Solana"
+  },
+  "author": "Aniruddh Salunkhe",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}
