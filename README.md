@@ -1,134 +1,142 @@
-# 🌐 Web3 Research Assistant
+# 🌐 Web3 Research Assistant with JuliaOS Swarm Integration
 
-A simple and visually engaging assistant that helps users research Web3 projects and check Solana wallet balances — built for the JuliaOS bounty project.
-
-## 🚀 Features
-
-- 🔍 Enter any Web3 project name and get an AI-generated research summary.
-- 💰 Check real-time SOL balance of any Solana wallet.
-- ✨ Beautiful animated UI with shooting stars and glassmorphism.
-- ⚡ Backend using Node.js, Express, and Groq's LLaMA 3 model.
-- 🔐 Environment variables handled with `.env`.
-
-## 📸 Demo
-
-![Web UI Preview](./screenshot.png) <!-- Add your screenshot file in the repo -->
+A decentralized AI-powered research assistant that gathers real-time Web3 project intelligence using JuliaOS agents and swarm coordination.  
+Created by [letsdeploy16](https://github.com/letsdeploy16) for the JuliaOS bounty challenge.
 
 ---
 
-## 📁 Project Structure
+## 🚀 Features
 
-```
-web3-research-assistant/
-├── agent.js             # Express backend
-├── public/
-│   └── index.html       # Frontend UI
-│   └── script.js        # Client-side logic
-├── .env                 # Groq API Key
-├── package.json         # Dependencies
-└── README.md            # Project overview
-```
+- 🔍 Web3 Project Research using LLaMA 3 via Groq API  
+- 💰 SOL Wallet Balance Checker  
+- 🧠 Modular Agent System (OverviewAgent, TokenAgent, CommunityAgent, SecurityAgent)  
+- 🐝 JuliaOS Swarm Integration for coordinated multi-agent execution  
+- 🎨 Modern responsive frontend with glassmorphism and shooting star animations  
+
+---
+
+## 📸 Screenshots
+
+### 🔹 Project Research Output  
+![Research Output](agent.js.png)
+
+### 🔹 SOL Balance Checker  
+![SOL Balance](successful API Call.png)
+
+
+### 🔹 Front-end UI 
+(Front_end UI.png)
+
+---
+
+## 🧠 Architecture Overview
+
+- **Frontend**: HTML/CSS/JavaScript (no framework)
+- **Backend**: Node.js with Express
+- **AI Engine**: LLaMA 3 via Groq API
+- **Blockchain API**: Solana Web3.js
+- **Swarm Coordination**: JuliaOS agent API integration
+
+---
+
+## 📽️ Live Demo
+
+Watch the full demo here: [Click to view demo] (https://drive.google.com/file/d/1qtgF4ufwyQsSoSGovM1UurCPB3NMJJXJ/view?usp=drive_link)
+
+## 🐝 JuliaOS Usage
+
+This dApp uses **JuliaOS primitives** in the following way:
+
+- Agents are modularized into individual `.js` files representing distinct tasks (e.g., `overviewAgent.js`, `tokenAgent.js`).
+- Swarm orchestrator (`swarmCoordinator.js`) coordinates parallel agent execution and aggregates results.
+- Demonstrates swarm coordination pattern with real-time Groq API calls per agent.
+- Extensible swarm logic allows additional agents for deeper on-chain or community analysis.
 
 ---
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the repo
+### 1. Clone Repo
 
 ```bash
-git clone https://github.com/yourusername/web3-research-assistant.git
+git clone https://github.com/letsdeploy16/web3-research-assistant.git
 cd web3-research-assistant
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Add your Groq API key
-
-Create a `.env` file:
+### 3. Create `.env` file
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 4. Start the backend
+### 4. Run the Server
 
 ```bash
 node agent.js
 ```
 
-You should see:
-```
-🚀 Research API listening at http://localhost:3000
-```
+### 5. Open Frontend
 
-### 5. Open the frontend
+Open `public/index.html` in your browser directly  
+or use VS Code Live Server (`right-click > Open with Live Server`).
 
-Just open `public/index.html` in your browser.
+---
 
-Or run a simple local server:
+## 🧪 Testing
+
+You can test via:
+
+- Web UI inputs (research form, SOL checker)
+- Postman or `curl`:
 
 ```bash
-npx serve public
-```
-
-Then navigate to: [http://localhost:8000](http://localhost:8000)
-
----
-
-## 📦 API Endpoints
-
-### `POST /research`
-
-**Body:**
-
-```json
-{ "projectName": "Polygon" }
-```
-
-**Response:**
-
-```json
-{ "result": "Research summary..." }
+curl -X POST http://localhost:3000/research \
+  -H "Content-Type: application/json" \
+  -d '{"projectName": "Uniswap"}'
 ```
 
 ---
 
-### `POST /solana-balance`
+## 📁 File Structure
 
-**Body:**
-
-```json
-{ "address": "YOUR_SOL_WALLET_ADDRESS" }
 ```
-
-**Response:**
-
-```json
-{ "address": "...", "sol": 1.23 }
+web3-research-assistant/
+├── agent.js               # Main server with API routes
+├── agents/
+│   ├── overviewAgent.js
+│   ├── tokenAgent.js
+│   ├── communityAgent.js
+│   └── securityAgent.js
+├── swarmCoordinator.js    # Executes all agents in parallel
+├── public/
+│   └── index.html         # Frontend UI
+├── screenshots/
+│   └── *.png              # Screenshots for demo
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
 ```
-
----
-
-## 🤖 Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js + Express
-- **AI Model:** [Groq LLaMA 3 API](https://console.groq.com/)
-- **Solana Integration:** `@solana/web3.js`
-- **Deployment-ready:** Works locally and can be hosted on Vercel, Netlify, or Railway
-
----
-
-## 💡 Credits
-
-Built with 💙 by [Aniruddh Salunkhe](https://github.com/letsdeploy16/web3-research-assistant)for the JuliaOS bounty.
 
 ---
 
 ## 📜 License
 
-MIT
+MIT License
+
+---
+
+---
+
+## 🙌 Credits
+
+Built with ☢️ by [letsdeploy16](https://github.com/letsdeploy16)  
+Using [Groq AI](https://groq.com/), [Solana Web3.js](https://solana-labs.github.io/), and [JuliaOS](https://juliaos.org/)
+
+---
