@@ -21,10 +21,10 @@ Created by [letsdeploy16](https://github.com/letsdeploy16) for the JuliaOS bount
 ![Research Output] (![alt text](public/screenshots.png/agent.js.jpeg))
 
 ### 🔹 SOL Balance Checker
-![SOL Balance](public/screenshots.png/successful API Call.jpeg)
+![SOL Balance] (![alt text](<public/screenshots.png/successful API Call.jpeg>))
 
 ### 🔹 Front-end UI
-![Front-end UI](public/screenshots.png/Front-end UI.jpeg)
+![Front-end UI](public/screenshots.png/Front-end%20UI.jpeg)
 ---
 
 ## 🧠 Architecture Overview
