@@ -17,16 +17,14 @@ Created by [letsdeploy16](https://github.com/letsdeploy16) for the JuliaOS bount
 
 ## 📸 Screenshots
 
-### 🔹 Project Research Output  
-![Research Output](agent.js.png)
+### 🔹 Project Research Output
+![Research Output] (![alt text](public/screenshots.png/agent.js.jpeg))
 
-### 🔹 SOL Balance Checker  
-![SOL Balance](successful API Call.png)
+### 🔹 SOL Balance Checker
+![SOL Balance](public/screenshots.png/successful API Call.jpeg)
 
-
-### 🔹 Front-end UI 
-(Front_end UI.png)
-
+### 🔹 Front-end UI
+![Front-end UI](public/screenshots.png/Front-end UI.jpeg)
 ---
 
 ## 🧠 Architecture Overview
