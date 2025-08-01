@@ -1,4 +1,4 @@
-// ✅ Fetch research from backend
+// Fetch research from backend
 async function fetchResearch() {
   const project = document.getElementById('projectName').value;
   const resultDiv = document.getElementById('result');
@@ -13,7 +13,7 @@ async function fetchResearch() {
       body: JSON.stringify({ projectName: project }),
     });
 
-    // ❌ FIXED: You used 'res' in fetch but 'response' here — must be same variable name
+    // FIXED: You used 'res' in fetch but 'response' here — must be same variable name
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -31,7 +31,7 @@ async function fetchResearch() {
   }
 }
 
-// ✅ Event listeners after DOM is loaded
+// Event listeners after DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("researchForm").addEventListener("submit", function (e) {
     e.preventDefault();

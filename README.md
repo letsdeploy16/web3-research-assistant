@@ -1,93 +1,134 @@
-# Web3 Research Assistant
+# 🌐 Web3 Research Assistant
 
-A simple and powerful AI-powered agent that performs automated research on Web3 projects using Groq's LLaMA 3 model. Built for the JuliaOS bounty.
+A simple and visually engaging assistant that helps users research Web3 projects and check Solana wallet balances — built for the JuliaOS bounty project.
 
-## 🔍 Features
+## 🚀 Features
 
-- Summarizes project overview, tokenomics, community stats, GitHub activity, and more  
-- Runs completely locally via Node.js  
-- Powered by Groq's blazing-fast inference API (100% free, no credit card required)
+- 🔍 Enter any Web3 project name and get an AI-generated research summary.
+- 💰 Check real-time SOL balance of any Solana wallet.
+- ✨ Beautiful animated UI with shooting stars and glassmorphism.
+- ⚡ Backend using Node.js, Express, and Groq's LLaMA 3 model.
+- 🔐 Environment variables handled with `.env`.
+
+## 📸 Demo
+
+![Web UI Preview](./screenshot.png) <!-- Add your screenshot file in the repo -->
 
 ---
 
-## ⚙️ Setup Instructions
+## 📁 Project Structure
 
-### 1. Clone or Download this Repo
+```
+web3-research-assistant/
+├── agent.js             # Express backend
+├── public/
+│   └── index.html       # Frontend UI
+│   └── script.js        # Client-side logic
+├── .env                 # Groq API Key
+├── package.json         # Dependencies
+└── README.md            # Project overview
+```
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/yourusername/web3-research-assistant.git
 cd web3-research-assistant
 ```
 
-### 2. Install Dependencies
+### 2. Install dependencies
 
 ```bash
-npm install openai dotenv
+npm install
 ```
 
-> You are still using the OpenAI SDK as it works with Groq.
+### 3. Add your Groq API key
 
-### 3. Set Your Groq API Key
+Create a `.env` file:
 
-Create a `.env` file in the root:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### 4. Start the backend
 
 ```bash
-touch .env
+node agent.js
 ```
 
-Inside `.env`, add your key:
-
+You should see:
 ```
-GROQ_API_KEY=your_actual_groq_key_here
+🚀 Research API listening at http://localhost:3000
 ```
 
----
+### 5. Open the frontend
 
-## 🚀 Usage
+Just open `public/index.html` in your browser.
 
-Run the agent by passing a Web3 project name:
+Or run a simple local server:
 
 ```bash
-node agent.js Solana
+npx serve public
 ```
 
-Output:
+Then navigate to: [http://localhost:8000](http://localhost:8000)
 
+---
+
+## 📦 API Endpoints
+
+### `POST /research`
+
+**Body:**
+
+```json
+{ "projectName": "Polygon" }
 ```
-🔍 Researching project: Solana...
-🧠 AI Research Result:
-(Project overview, tokenomics, GitHub, security, and more)
+
+**Response:**
+
+```json
+{ "result": "Research summary..." }
 ```
 
 ---
 
-## 🧠 Example Projects to Try
+### `POST /solana-balance`
 
-- Polygon  
-- Uniswap  
-- Aave  
-- Chainlink  
-- Arbitrum  
-- Filecoin
+**Body:**
 
----
+```json
+{ "address": "YOUR_SOL_WALLET_ADDRESS" }
+```
 
-## 🛠 Tech Stack
+**Response:**
 
-- Node.js  
-- Groq (LLaMA 3 model via `openai` SDK)  
-- dotenv for secure key management
+```json
+{ "address": "...", "sol": 1.23 }
+```
 
 ---
 
-## 🪪 License
+## 🤖 Tech Stack
 
-MIT License
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js + Express
+- **AI Model:** [Groq LLaMA 3 API](https://console.groq.com/)
+- **Solana Integration:** `@solana/web3.js`
+- **Deployment-ready:** Works locally and can be hosted on Vercel, Netlify, or Railway
 
 ---
 
-## 🌐 For JuliaOS Bounty
+## 💡 Credits
 
-- Agent is fully autonomous and uses Groq LLM via API  
-- No front-end (CLI-based)  
-- Can be easily extended to support JuliaOS swarms or UI layer
+Built with 💙 by [Aniruddh Salunkhe](https://github.com/letsdeploy16/web3-research-assistant)for the JuliaOS bounty.
+
+---
+
+## 📜 License
+
+MIT

@@ -12,7 +12,7 @@ app.use(express.json());
 
 console.log("🟢 Starting server...");
 
-// ✅ Solana Balance API
+// Solana Balance API
 app.post('/solana-balance', async (req, res) => {
   console.log("✅ Registering /solana-balance route");
   const { address } = req.body;
@@ -28,7 +28,7 @@ app.post('/solana-balance', async (req, res) => {
   }
 });
 
-// 🧠 Modular Swarm Agent Prompt Builders
+// Modular Swarm Agent Prompt Builders
 function getOverviewPrompt(project) {
   return `Give a short overview of the Web3 project "${project}".`;
 }
@@ -48,7 +48,7 @@ function getNewsPrompt(project) {
   return `List recent news, updates, or partnerships related to "${project}".` ;
 }
 
-// ✅ Web3 Research Endpoint (Swarm-style)
+// Web3 Research Endpoint (Swarm-style)
 app.post('/research', async (req, res) => {
   console.log("🐛 /research endpoint hit!");
   const { projectName } = req.body;
@@ -97,7 +97,7 @@ app.post('/research', async (req, res) => {
   }
 });
 
-// ✅ Start the server
+// Start the server
 app.listen(port, () => {
   console.log(`🚀 Research API listening at http://localhost:${port}`);
 });
