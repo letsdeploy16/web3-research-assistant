@@ -1,4 +1,4 @@
-# 🧠 Web3 Research Assistant
+#  🌐 Web-3 Research Assistant powered by JuliaOS
 
 > A decentralized dApp that uses modular agents to research Web3 projects and check Solana wallet balances. Designed with a Swarm-inspired agent system aligned with JuliaOS principles.
 
@@ -58,7 +58,7 @@ Due to the current unavailability of the official JuliaOS CLI tools and NPM pack
  ## 📽️ Live Demo 
  Watch the full demo here: [Click to view demo](https://drive.google.com/file/d/1qtgF4ufwyQsSoSGovM1UurCPB3NMJJXJ/view?usp=drive_link)
 
---- 
+---
 
 ## ⚙️ Local Setup
 
@@ -121,7 +121,7 @@ curl -X POST http://localhost:3000/research \
 
 ---
 
-## 🧠 Submission Notes (JuliaOS Bounty)
+## ⚜️ Submission Notes (JuliaOS Bounty)
 - ❗ While JuliaOS CLI & NPM packages are not publicly available,
   this dApp demonstrates full agent modularity and swarm orchestration manually.
 - ✅ Fully aligned with JuliaOS architecture & ready for integration once tools release.
